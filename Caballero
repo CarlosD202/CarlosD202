@@ -1,0 +1,46 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package pvp;
+
+import java.util.Random;
+
+/**
+ *
+ * Carlos Daniel Chinchilla García
+ */
+public class Caballero extends PVVP {
+    
+    public Caballero()
+    {
+        super("Caballero",125,20,35,0.6, "Corte de espada");
+    }
+    public void aumentoAtaque()
+    {
+        Random r = new Random();
+        int a = r.nextInt(200);
+        if(a>100&&a<150&&this.getSalud()<50)
+        {
+            int ataque = this.getAtaque();
+            ataque+=3;
+            this.setAtaque();
+             
+            System.out.println("Pobrecito jajaja..... creiste que me derrotarias");
+            System.out.println("Con tus debiles ataques solo aumentantes mi poder");
+        }
+    }
+    public void bajarDefensa()
+    {
+        Random r = new Random();
+        int a = r.nextInt(200);
+        if(a>100 && this.getSalud()>100)
+        {
+            int defensa = this.getDefensa();
+            defensa-=3;
+            this.setDefensa(defensa);
+            System.out.println("Me dañaste la armadura");
+            System.out.println("Me derrotaste");
+        }
+    }
+}
