@@ -9,15 +9,21 @@ import java.util.Random;
  *
  * Carlos Daniel Chinchilla García
  */
+ 
+ 
 public final class Computadora extends PVVP{
     private int vidaTotal;
     public Computadora()
+    
+    
     {
         super();
         this.vidaTotal = super.getSalud();
     }
     
     public void aumentarDefensa()
+    
+    
     {
         Random r = new Random();
         int a = r.nextInt(200);
