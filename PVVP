@@ -16,6 +16,8 @@ package pvp;
 
 //A continuación iniciaremos la clase
 public class PVVP {
+
+
     private String nombre = "Computadora";
     private int salud =200;
     private int ataque =30;
@@ -24,6 +26,8 @@ public class PVVP {
     private String tipoA;
     
     // Le damos valores de inicio 
+    
+    
     public PVVP (String _nombre, int _salud, int _ataque, int _defensa, double _ta, String _tipoA)
     {
    
@@ -33,6 +37,8 @@ public class PVVP {
      defensa =_defensa;
      ta =_ta;
      tipoA =_tipoA ;
+     
+     
     }
     
  
@@ -96,16 +102,24 @@ public class PVVP {
     //Método adstracción
     public void Atacado(int _ataque, String _tipo)
     {
+    
+    
         int daño = _ataque-this.defensa;
         int vidaRestante=this.salud;
         if(daño>0){
             vidaRestante-=daño;
             System.out.println(this.nombre+"TRecibido un "+_tipo+" vida");
+            
+            
         }else{
             System.out.println(this.nombre+" recibio un "+_tipo+" Levantate y ataca");
+            
+            
         }
         this.salud = vidaRestante;
         System.out.println(this.nombre+" tiene "+this.salud+" vida restante");
+        
+        
     }
     
     public void Esquivar ()
