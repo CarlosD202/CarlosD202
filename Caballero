@@ -13,14 +13,19 @@ import java.util.Random;
 public class Caballero extends PVVP {
     
     public Caballero()
+    
     {
         super("Caballero",125,20,35,0.6, "Corte de espada");
     }
+    
     public void aumentoAtaque()
     {
         Random r = new Random();
         int a = r.nextInt(200);
         if(a>100&&a<150&&this.getSalud()<50)
+        
+        
+        
         {
             int ataque = this.getAtaque();
             ataque+=3;
@@ -28,13 +33,21 @@ public class Caballero extends PVVP {
              
             System.out.println("Pobrecito jajaja..... creiste que me derrotarias");
             System.out.println("Con tus debiles ataques solo aumentantes mi poder");
+            
+            
         }
     }
+    
+    
     public void bajarDefensa()
+    
+    
     {
         Random r = new Random();
         int a = r.nextInt(200);
         if(a>100 && this.getSalud()>100)
+        
+        
         {
             int defensa = this.getDefensa();
             defensa-=3;
